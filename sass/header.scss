@@ -1,0 +1,119 @@
+@import './settings.scss';
+
+.navbar-top {
+  display: flex;
+  position: fixed;
+  top: 0;
+
+  flex-direction: row;
+  align-items: baseline;
+  margin: 0 ($base-size * 3.5);
+
+  ul {
+    display: flex;
+    margin-left: auto;
+
+    li {
+      list-style: none;
+      padding: 0 ($base-size / 2);
+    }
+  }
+}
+
+.navbar-social {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  z-index: 1000;
+  right: 0;
+
+  li {
+    font-size: 0.9rem;
+    list-style: none;
+    padding: $base-size;
+  }
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  position: fixed;
+  left: ($base-size*3.5);
+  padding: ($base-size);
+
+}
+
+.navbar-lang {
+  position: fixed;
+  top: $base-size;
+  font-size: 0.6rem;
+  right: ($base-size*3.5);
+}
+
+.navbar-arrow {
+  position: fixed;
+  display: flex;
+  justify-content: baseline;
+  font-size: 1rem;
+  transform: rotate(90deg);
+  color: $color-dark;
+  bottom: 10vh;
+}
+
+.hamburger {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: ($base-size * 1.5);
+  transform: translate(0, -50%);
+  padding: 1px;
+}
+
+#nav-icon1 {
+  width: 20px;
+  height: 30px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 4px;
+  background: $color-dark;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 10px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 20px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 9px;
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-135deg);
+}

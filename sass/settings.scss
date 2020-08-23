@@ -1,0 +1,67 @@
+/*Global*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$base-size: 12px;
+
+//colors
+$color-medium: #f8f8f8;
+$color-dark: #1c1b20;
+
+.body {
+  height: 100vh;
+  letter-spacing: 2px;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  color: $color-dark;
+}
+
+.container {
+  height: 90vh;
+  margin: ($base-size*3.5);
+  padding: $base-size;
+  overflow: hidden;
+  background: $color-medium;
+}
+
+a {
+  text-decoration: none;
+  color: $color-dark;
+
+}
+
+//animations
+
+.slide-right {
+  -webkit-animation: slide-right 700ms cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both;
+  animation: slide-right 700ms cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+}
+
+
