@@ -1,0 +1,14 @@
+
+/*grid*/
+$col: 12;
+
+@for $i from 1 through $col {
+    .col-#{$i} {
+        width: (100% / $i);
+    }
+}
+
+.row{
+  display: flex;
+  flex-wrap: nowrap;
+}
