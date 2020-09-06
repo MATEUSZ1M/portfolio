@@ -6,19 +6,18 @@
 }
 
 .body {
-  height: 100vh;
   letter-spacing: 2px;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
   color: #1c1b20;
+  height: 90vh;
 }
 
 .container {
-  height: 90vh;
   margin: 42px;
-  padding: 12px;
-  overflow: hidden;
+  overflow: scroll;
   background: #f8f8f8;
+  height: 90vh;
 }
 
 a {
@@ -51,6 +50,41 @@ a {
     -webkit-transform: translateX(15px);
     transform: translateX(15px);
   }
+}
+
+.welcome {
+  width: 100%;
+  height: 100vh;
+  background: tomato;
+  position: relative;
+  left: -50%;
+}
+
+.welcome .welcome-title {
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  right: -300px;
+  display: block;
+}
+
+.welcome .welcome-title h1 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 72px;
+  letter-spacing: 10px;
+}
+
+.welcome .welcome-title h1 span:first-of-type {
+  color: #f8f8f8;
+}
+
+.welcome .welcome-title h1 span:last-of-type {
+  color: tomato;
+}
+
+.dddupa {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=welcome.css.map */

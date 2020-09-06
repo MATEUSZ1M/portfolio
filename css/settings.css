@@ -6,19 +6,18 @@
 }
 
 .body {
-  height: 100vh;
   letter-spacing: 2px;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
   color: #1c1b20;
+  height: 90vh;
 }
 
 .container {
-  height: 90vh;
   margin: 42px;
-  padding: 12px;
-  overflow: hidden;
+  overflow: scroll;
   background: #f8f8f8;
+  height: 90vh;
 }
 
 a {

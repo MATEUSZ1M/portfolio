@@ -6,19 +6,18 @@
 }
 
 .body {
-  height: 100vh;
   letter-spacing: 2px;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
   color: #1c1b20;
+  height: 90vh;
 }
 
 .container {
-  height: 90vh;
   margin: 42px;
-  padding: 12px;
-  overflow: hidden;
+  overflow: scroll;
   background: #f8f8f8;
+  height: 90vh;
 }
 
 a {
@@ -104,11 +103,54 @@ a {
 .navbar-arrow {
   position: fixed;
   display: flex;
-  justify-content: baseline;
   font-size: 1rem;
   transform: rotate(90deg);
   color: #1c1b20;
   bottom: 10vh;
+  padding-top: 18px;
+}
+
+.navbar-menu {
+  width: 50%;
+  height: 90vh;
+  position: absolute;
+  background: #f1f2f6;
+  left: -50%;
+  z-index: 999;
+}
+
+.navbar-menu .nav-menulist ul {
+  position: absolute;
+  list-style: none;
+  font-size: 36px;
+  top: 45%;
+  left: 20%;
+  transform: translateY(-45%);
+}
+
+.navbar-menu .nav-menulist ul li {
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.navbar-menu .nav-menulist ul li:after {
+  backface-visibility: hidden;
+  border-top: 4px solid #1c1b20;
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 250ms ease-in-out;
+  width: 0;
+}
+
+.navbar-menu .nav-menulist ul li:hover:after {
+  backface-visibility: hidden;
+  border-color: #1c1b20;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+  letter-spacing: 3px;
 }
 
 .hamburger {
@@ -116,7 +158,7 @@ a {
   position: fixed;
   z-index: 1000;
   top: 50%;
-  left: 18px;
+  left: 12px;
   transform: translate(0, -50%);
   padding: 1px;
 }
@@ -167,6 +209,14 @@ a {
 #nav-icon1.open span:nth-child(3) {
   top: 9px;
   transform: rotate(-135deg);
+}
+
+/* scroll bar */
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+  display: none;
 }
 
 /*# sourceMappingURL=header.css.map */

@@ -8,29 +8,28 @@
 $base-size: 12px;
 
 //colors
+$color-light:#f1f2f6; 
 $color-medium: #f8f8f8;
 $color-dark: #1c1b20;
 
 .body {
-  height: 100vh;
   letter-spacing: 2px;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
   color: $color-dark;
+  height: 90vh;
 }
 
 .container {
-  height: 90vh;
   margin: ($base-size*3.5);
-  padding: $base-size;
-  overflow: hidden;
+  overflow: scroll;
   background: $color-medium;
+  height: 90vh;
 }
 
 a {
   text-decoration: none;
   color: $color-dark;
-
 }
 
 //animations
@@ -63,5 +62,3 @@ a {
     transform: translateX(15px);
   }
 }
-
-
